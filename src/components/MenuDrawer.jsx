@@ -1,3 +1,4 @@
+import { cv } from '../data/cv.js'
 import './MenuDrawer.css'
 
 const NAV_ITEMS = [
@@ -32,9 +33,7 @@ function MenuDrawer({ open, activeRoute, onClose, onNavigate }) {
           ))}
         </nav>
         <div className="menu-panel__footer">
-          Jordan Avery · Senior Business Analyst
-          <br />
-          Bristol, UK
+          {cv.name} · {cv.role}
         </div>
       </div>
     </>

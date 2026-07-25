@@ -1,11 +1,11 @@
+import { cv } from '../data/cv.js'
 import './Header.css'
 
 function Header({ onGoHome, onToggleMenu }) {
   return (
     <header className="site-header">
       <div className="site-header__identity" onClick={onGoHome}>
-        Jordan Avery{' '}
-        <span className="site-header__role">SENIOR BUSINESS ANALYST</span>
+        {cv.name} <span className="site-header__role">{cv.role}</span>
       </div>
       <button
         type="button"
