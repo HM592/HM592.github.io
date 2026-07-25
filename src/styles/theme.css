@@ -1,0 +1,22 @@
+/*
+  Design tokens — from design_handoff_cv_website/README.md ("Design Tokens").
+  Tweak --theme-color / --accent-color here to re-theme the whole site.
+*/
+:root {
+  /* base tweakable colors */
+  --theme-color: #c9d6d1;
+  --accent-color: #e4e6e2;
+
+  /* accent, exposed as its own var so components read one name either way */
+  --ac: var(--accent-color);
+
+  /* accent-derived transparent variants (alpha 1 / .5 / .28 / .18 / .12) */
+  --acB: var(--accent-color);
+  --ac50: color-mix(in srgb, var(--accent-color) 50%, transparent);
+  --ac28: color-mix(in srgb, var(--accent-color) 28%, transparent);
+  --ac18: color-mix(in srgb, var(--accent-color) 18%, transparent);
+  --ac12: color-mix(in srgb, var(--accent-color) 12%, transparent);
+
+  /* shared motion ease used for all color/opacity/transform transitions */
+  --ease: cubic-bezier(0.22, 1, 0.36, 1);
+}
