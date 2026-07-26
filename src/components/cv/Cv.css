@@ -268,10 +268,10 @@
 }
 
 .profile-headline {
-  font-family: 'Newsreader', serif;
+  font-family: var(--font);
   font-size: 36px;
   line-height: 1.14;
-  font-weight: 500;
+  font-weight: 600;
   color: #f4f9f8;
   max-width: 540px;
 }

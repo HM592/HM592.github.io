@@ -27,7 +27,7 @@
 }
 
 .site-header__identity {
-  font-family: 'Newsreader', serif;
+  font-family: var(--font);
   font-size: 20px;
   font-weight: 600;
   color: #f4f9f8;
@@ -36,7 +36,7 @@
 }
 
 .site-header__role {
-  font-family: Helvetica, Arial, sans-serif;
+  font-family: var(--font);
   font-size: 11px;
   letter-spacing: 0.16em;
   color: var(--ac);

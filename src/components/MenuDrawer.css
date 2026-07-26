@@ -64,9 +64,9 @@
 }
 
 .menu-panel__item {
-  font-family: 'Newsreader', serif;
+  font-family: var(--font);
   font-size: 30px;
-  font-weight: 500;
+  font-weight: 600;
   color: #f4f9f8;
   padding: 10px 0;
   cursor: pointer;

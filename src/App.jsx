@@ -6,7 +6,7 @@ import OpeningScreen from './components/opening/OpeningScreen.jsx'
 import './App.css'
 
 const REVISIT_STORAGE_KEY = 'cv-opened-at'
-const REVISIT_WINDOW_MS = 3 * 60 * 1000 // 3 minutes
+const REVISIT_WINDOW_MS = 5 * 60 * 1000 // 5 minutes
 
 function prefersReducedMotion() {
   try {

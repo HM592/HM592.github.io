@@ -364,6 +364,7 @@
 }
 
 .opening-clipboard__role {
+  font-family: Helvetica, Arial, sans-serif;
   font-size: 11px;
   letter-spacing: 0.16em;
   text-transform: uppercase;

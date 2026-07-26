@@ -19,4 +19,8 @@
 
   /* shared motion ease used for all color/opacity/transform transitions */
   --ease: cubic-bezier(0.22, 1, 0.36, 1);
+
+  /* main site font (header, menu, CV content) — NOT the opening/clipboard
+     screen, which keeps its own fonts on purpose */
+  --font: 'Poppins', Helvetica, Arial, sans-serif;
 }

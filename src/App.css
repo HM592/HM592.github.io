@@ -8,7 +8,7 @@
     color-mix(in srgb, var(--theme-color) 40%, #24413a) 58%,
     color-mix(in srgb, var(--theme-color) 20%, #16302b) 100%
   );
-  font-family: Helvetica, 'Helvetica Neue', Arial, sans-serif;
+  font-family: var(--font);
   color: #f4f9f8;
 }
 
@@ -21,6 +21,7 @@
 
 .route-panel {
   padding: 52px 48px;
-  font-family: 'Newsreader', serif;
+  font-family: var(--font);
+  font-weight: 600;
   font-size: 36px;
 }
