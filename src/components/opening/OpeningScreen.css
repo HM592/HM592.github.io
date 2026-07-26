@@ -495,9 +495,13 @@
 }
 
 /* ---------- small phones ---------- */
-
-@media (max-width: 400px) {
+/* The pen rotates around its base, which swings its tip ~80-90px to the
+   RIGHT of the clipboard's own edge (not just up) — wide enough that it
+   gets clipped on almost any phone unless the whole assembly shrinks.
+   0.65 keeps that tip comfortably inside the viewport down to ~360px
+   wide phones; the breakpoint covers phones up to phablet width. */
+@media (max-width: 600px) {
   .opening-clipboard-wrap {
-    transform: scale(0.82);
+    transform: scale(0.65);
   }
 }
