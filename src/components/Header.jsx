@@ -1,9 +1,9 @@
 import { cv } from '../data/cv.js'
 import './Header.css'
 
-function Header({ onGoHome, onToggleMenu }) {
+function Header({ visible = true, onGoHome, onToggleMenu }) {
   return (
-    <header className="site-header">
+    <header className={`site-header${visible ? '' : ' site-header--hidden'}`}>
       <div className="site-header__identity" onClick={onGoHome}>
         {cv.name} <span className="site-header__role">{cv.role}</span>
       </div>
