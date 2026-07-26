@@ -7,7 +7,14 @@ function CvMobileBar({ active, onGo }) {
         {CV_SECTIONS.map((name, i) => {
           const done = i <= active
           return (
-            <div key={name} className="mobile-dot-group" onClick={() => onGo(i)}>
+            <button
+              type="button"
+              key={name}
+              className="mobile-dot-group"
+              onClick={() => onGo(i)}
+              aria-label={`Go to ${name} section`}
+              aria-current={i === active ? 'true' : undefined}
+            >
               <span
                 className={`mobile-dot${done ? ' mobile-dot--done' : ''}${
                   i === active ? ' mobile-dot--active' : ''
@@ -20,7 +27,7 @@ function CvMobileBar({ active, onGo }) {
                   }`}
                 />
               )}
-            </div>
+            </button>
           )
         })}
       </div>

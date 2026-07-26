@@ -2,6 +2,7 @@ import { useRef, useState } from 'react'
 import Header from './components/Header.jsx'
 import MenuDrawer from './components/MenuDrawer.jsx'
 import CvRoute from './components/cv/CvRoute.jsx'
+import ContactRoute from './components/contact/ContactRoute.jsx'
 import OpeningScreen from './components/opening/OpeningScreen.jsx'
 import './App.css'
 
@@ -119,8 +120,8 @@ function App() {
         <div className="route-panel" style={{ display: route === 'ai' ? 'block' : 'none' }}>
           ai
         </div>
-        <div className="route-panel" style={{ display: route === 'contact' ? 'block' : 'none' }}>
-          contact
+        <div style={{ display: route === 'contact' ? 'block' : 'none' }}>
+          <ContactRoute />
         </div>
       </main>
 

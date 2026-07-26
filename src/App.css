@@ -2,14 +2,25 @@
   position: fixed;
   inset: 0;
   overflow: hidden;
+  /* Bright, narrow-range gradient — brighter overall than the original
+     design (80% down to 72%, vs. the original 62/40/20). Text on this
+     background is dark (--text / --text-muted / --accent-text in
+     theme.css). The range is kept narrow on purpose: since this
+     background is fixed to the viewport, content scrolls through its
+     full range, including the darkest edge — a wide light-to-dark spread
+     (like the original 62→20) means no single text color can stay
+     readable at both ends. Keeping all three stops close together (and
+     bright) gives a gentle vignette instead of a dramatic glow, but
+     verified WCAG AA (4.5:1+) for --text everywhere, including the
+     darkest edge. */
   background: radial-gradient(
     120% 120% at 50% 30%,
-    color-mix(in srgb, var(--theme-color) 62%, #24413a) 0%,
-    color-mix(in srgb, var(--theme-color) 40%, #24413a) 58%,
-    color-mix(in srgb, var(--theme-color) 20%, #16302b) 100%
+    color-mix(in srgb, var(--theme-color) 80%, #24413a) 0%,
+    color-mix(in srgb, var(--theme-color) 76%, #24413a) 58%,
+    color-mix(in srgb, var(--theme-color) 72%, #16302b) 100%
   );
   font-family: var(--font);
-  color: #f4f9f8;
+  color: var(--text);
 }
 
 .app-routes {

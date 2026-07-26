@@ -11,7 +11,13 @@ function CvSpine({ active, progress, onGo }) {
             const isActive = i === active
             const done = i <= active
             return (
-              <div key={name} className="spine-dot-row" onClick={() => onGo(i)}>
+              <button
+                type="button"
+                key={name}
+                className="spine-dot-row"
+                onClick={() => onGo(i)}
+                aria-current={isActive ? 'true' : undefined}
+              >
                 <span
                   className={`spine-dot${isActive ? ' spine-dot--active' : ''}${
                     done ? ' spine-dot--done' : ''
@@ -21,7 +27,7 @@ function CvSpine({ active, progress, onGo }) {
                   {name}
                 </div>
                 {isActive && <div className="spine-now-reading">Now reading</div>}
-              </div>
+              </button>
             )
           })}
         </div>

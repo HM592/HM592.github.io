@@ -10,12 +10,12 @@ function Skills({ data, revealed, onAskAI, onGetInTouch }) {
         ))}
       </div>
       <div className="cv-cta-row">
-        <div className="cv-cta cv-cta--solid" onClick={onAskAI}>
+        <button type="button" className="cv-cta cv-cta--solid" onClick={onAskAI}>
           Ask my AI about me →
-        </div>
-        <div className="cv-cta cv-cta--outline" onClick={onGetInTouch}>
+        </button>
+        <button type="button" className="cv-cta cv-cta--outline" onClick={onGetInTouch}>
           Get in touch
-        </div>
+        </button>
       </div>
     </div>
   )

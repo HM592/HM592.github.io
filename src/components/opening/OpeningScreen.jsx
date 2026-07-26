@@ -39,7 +39,13 @@ function OpeningScreen({ opened, onOpen }) {
 
       <div className="opening-center">
         <div className="opening-clipboard-wrap">
-          <div className="opening-clipboard" onClick={onOpen}>
+          <button
+            type="button"
+            className="opening-clipboard"
+            onClick={onOpen}
+            aria-label="Open my CV"
+            tabIndex={opened ? -1 : undefined}
+          >
             <div className="opening-clipboard__clip-band" />
             <div className="opening-clipboard__clip-arm" />
 
@@ -76,7 +82,7 @@ function OpeningScreen({ opened, onOpen }) {
                 </div>
               </div>
             </div>
-          </div>
+          </button>
         </div>
 
         <div className="opening-prompt">

@@ -10,6 +10,10 @@ export const cv = {
   name: 'Hussain Master',
   role: 'Business Analyst',
 
+  contact: {
+    email: 'hussainmaster43@gmail.com',
+  },
+
   profile: {
     headline: 'Converting business needs into shipped decisions.',
     paragraph:

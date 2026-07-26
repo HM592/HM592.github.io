@@ -3,9 +3,11 @@
   Tweak --theme-color / --accent-color here to re-theme the whole site.
 */
 :root {
-  /* base tweakable colors */
+  /* base tweakable colors — theme-color is the light teal background base;
+     accent is used for borders/dots/fills and (via --accent-text below)
+     for small accent-colored labels */
   --theme-color: #c9d6d1;
-  --accent-color: #e4e6e2;
+  --accent-color: #2fb3a8;
 
   /* accent, exposed as its own var so components read one name either way */
   --ac: var(--accent-color);
@@ -16,6 +18,33 @@
   --ac28: color-mix(in srgb, var(--accent-color) 28%, transparent);
   --ac18: color-mix(in srgb, var(--accent-color) 18%, transparent);
   --ac12: color-mix(in srgb, var(--accent-color) 12%, transparent);
+
+  /* Text colors for the light background (CV/Contact/menu/header-bar text
+     stays as it was — only content sitting directly on the light gradient
+     needs these). Values are chosen and verified to hit WCAG AA (4.5:1)
+     against the DARKEST point content can realistically scroll to (the
+     edges/bottom of the gradient in App.css) — not just its brightest
+     point — since a fixed-to-viewport gradient means content passes
+     through the whole range while scrolling.
+     --text: primary body/heading text.
+     --text-muted: secondary/dimmed text (replaces what used to be
+       opacity-based dimming — alpha blending doesn't preserve contrast
+       the same way once the background is light instead of dark).
+     --accent-text: a darker, WCAG-safe stand-in for --ac wherever the
+       accent color is used as *readable text* (eyebrows, dates, labels)
+       rather than as a border/fill/dot, where --ac itself is fine. */
+  --text: #173e3c;
+  --text-muted: #1c4340;
+  --accent-text: #0a3f3a;
+
+  /* Deep, muted teal used specifically for solid CTA button fills (Ask
+     my AI about me / Get in touch / Send message) — toned down from the
+     brighter --accent-color, which read as too "cyan" once used as a
+     large solid fill. Paired with light text, it also gives the button
+     much stronger separation from the now-bright page background
+     (verified ~5:1, vs ~1-2:1 with the brighter accent), so it pops the
+     way these buttons did before the accessibility rework. */
+  --button-fill: #164740;
 
   /* shared motion ease used for all color/opacity/transform transitions */
   --ease: cubic-bezier(0.22, 1, 0.36, 1);

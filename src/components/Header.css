@@ -33,6 +33,10 @@
   color: #f4f9f8;
   cursor: pointer;
   letter-spacing: 0.01em;
+  background: none;
+  border: none;
+  padding: 0;
+  text-align: left;
 }
 
 .site-header__role {

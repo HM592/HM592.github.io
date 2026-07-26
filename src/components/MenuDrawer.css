@@ -22,10 +22,12 @@
   width: 320px;
   max-width: 84vw;
   z-index: 60;
+  /* matches the main page's bright, narrow-range gradient (see App.css)
+     so the drawer's dark text keeps the same guaranteed contrast */
   background: linear-gradient(
     180deg,
-    color-mix(in srgb, var(--theme-color) 48%, #24413a),
-    color-mix(in srgb, var(--theme-color) 22%, #16302b)
+    color-mix(in srgb, var(--theme-color) 80%, #24413a),
+    color-mix(in srgb, var(--theme-color) 72%, #16302b)
   );
   border-left: 1px solid var(--ac28);
   box-shadow: -30px 0 60px -20px rgba(0, 0, 0, 0.6);
@@ -43,15 +45,18 @@
   top: 22px;
   right: 24px;
   font-size: 26px;
-  color: rgba(244, 249, 248, 0.6);
+  color: var(--text);
   cursor: pointer;
   line-height: 1;
+  background: none;
+  border: none;
+  padding: 4px;
 }
 
 .menu-panel__eyebrow {
   font-size: 11px;
   letter-spacing: 0.24em;
-  color: var(--ac);
+  color: var(--accent-text);
   text-transform: uppercase;
   margin-bottom: 34px;
   font-weight: 600;
@@ -64,20 +69,27 @@
 }
 
 .menu-panel__item {
+  display: block;
+  width: 100%;
   font-family: var(--font);
   font-size: 30px;
   font-weight: 600;
-  color: #f4f9f8;
+  color: var(--text);
   padding: 10px 0;
   cursor: pointer;
   border-left: 2px solid transparent;
   padding-left: 16px;
   margin-left: -18px;
   transition: color 0.25s var(--ease);
+  background: none;
+  border-top: none;
+  border-right: none;
+  border-bottom: none;
+  text-align: left;
 }
 
 .menu-panel__item--active {
-  color: var(--ac);
+  color: var(--accent-text);
   border-left-color: var(--ac);
 }
 
@@ -87,6 +99,6 @@
   left: 34px;
   right: 34px;
   font-size: 12px;
-  color: rgba(244, 249, 248, 0.4);
+  color: var(--text-muted);
   line-height: 1.6;
 }
