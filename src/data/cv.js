@@ -31,29 +31,51 @@ export const cv = {
 
   experience: [
     {
-      title: 'Business Analyst',
+      title: 'Business Analyst (BA4)',
       company: 'Barclays | Barclaycard Payments',
-      dateRange: '2022 — Present',
+      dateRange: '2024 — Present',
       description:
-        'Working at Barclaycard payments acquiring division, leading and owning BA workstreams across cross-functional initiatives including merchant platform migrations, financial crime process improvement, new SME funding products and more.',
+        'Highly functional BA working on an end-to-end scale across projects from inception to sign-off. Operating within the Barclays Acquiring Design Services team responsible for leading and delivering analysis & design input for change delivery projects.',
       achievements: [
-        'Requirements and analysis delivery for a new financial product (Barclaycard Business Cash Advance), enabling funding access to over 10,000 customers',
-        'Managed end-to-end merchant migration to a new gateway platform, successfully transitioning over 2,000 merchants without disruption',
-        'Defined and implemented new financial crime data requirements, supporting KYC review processes for 600+ cases monthly and strengthening regulatory compliance of new key financial crime data within our systems to better support the 700 monthly cases of KYC',
+        '10 months of experience leading acquiring analysis on a regulatory programme -> Return to Standards Fin-Crime programme within Barclays Merchant Services',
+        'Delivery of end-to-end core acquiring high-level and detailed requirements for the Fin-Crime initiative, ensuring acquiring compatibility & compliance',
+        'Strong grasp of Identity & Verification (ID&V) processes & Controls required for business customer due diligence (CDD), where I have led analysis to provide ID&V data for principals/individuals',
+        'Well-versed in process modelling, creating numerous architectural diagrams illustrating areas of potential changes easily for programme stakeholders',
+        'Consulted & advised senior stakeholders for application decisions that would best fit the fin-crime requirements',
+        'Understanding of key concepts pertaining to financial crime changes, including mandatory data elements, trigger rules for key data elements when altered in our servicing platforms and required alerts or controls which arise from those triggers',
+        'Organised and led workshops with high-level stakeholders including Financial Crime Execution Managers, Product Owners, KYC Process & Team Managers and Component (development) Teams',
+        'In-depth experience collaborating across multi-functional teams, working with financial crime, operational & technology SMEs throughout the delivery to fulfil regulatory needs & compliance',
+        'Extensive experience capturing user stories & project documentation on Jira & Confluence, utilising accessible M365 macros to publish & view PowerPoints & Excels online removing the need to download files locally',
+        'Optimisation of our project team task management, creating & managing a Kanban within Microsoft Lists',
+        'Experience utilising automation capabilities within Microsoft Power Automate to generate alerts for Kanban task modifications, as well as creating weekly MI reports for senior leadership',
       ],
     },
     {
-      title: 'Associate Business Analyst',
+      title: 'Business Analyst (BA3)',
+      company: 'Barclays | Barclaycard Payments',
+      dateRange: '2022 — 2024',
+      description:
+        'Working at Barclaycard Payments Acquiring, delivering key analysis and design input for transformation projects, including a gateway platform migration.',
+      achievements: [
+        'Led the analysis delivery for a successful merchant gateway platform migration consisting of over 2,000 merchants',
+        'Led migration planning for the gateway platform migration, creating schedules & sequences in accordance with feasibility, deadlines, risk-appetite, customer classification, and volume',
+        'Experience creating technical deployment plans with IT service management teams to ensure the relevant support teams, and activity timelines were detailed for the migration',
+        'Responsible for delivering analysis for changes into Core Acquiring Systems',
+        'Extensive experience conducting detailed analysis for settlement processes, providing a clear view between as-is and to-be states for affected applications',
+        'Provided numerous impact assessment for platform changes during triage to consider the financial, technical and operational implications of delivering',
+      ],
+    },
+    {
+      title: 'Apprentice Business Analyst',
       company: 'Barclays | Barclaycard Payments',
       dateRange: '2020 — 2022',
       description:
-        'Working at Barclaycard payments acquiring, delivering key analysis and design input for numerous changes to our core processing platforms which underpin the transaction lifecycle, supporting businesses with E-2-E transaction management, ranging from capture & authorisation to fund settlement.',
+        'Working at Barclaycard Payments Acquiring, delivering key analysis and design input for funding products & tech changes to their core processing platforms which underpin the transaction lifecycle, supporting businesses with E-2-E transaction management, ranging from capture & authorisation to fund settlement.',
       achievements: [
-        'Drove iterative enhancements to core processing systems, contributing to zero major incidents across 2021, improving settlement stability and reducing operational risk',
-        'Led E-2-E analysis for a new UI to the internal manual-settlement management platform, improving case handling experience and response times for the operational agent colleagues',
-        'Delivered requirements analysis and AS-IS, TO-BE gap analysis for an automation initiative, which streamlined pre-authorisation transaction MI reporting which used to be a manual process, thereby reducing operational overhead for the business',
-      ],
-    },
+        'Delivered analysis & requirements for a new acquiring funding product called ‘Barclaycard Business Cash Advance’ granting access to a funding partner who has provided over £1 billion in funding to date',
+        'Over 70% of approved applicants receiving funding within 1 working day',
+        'Experience delivering small change requests to Barclaycard Platforms',
+        'Exposure to working in large multi-functional teams & being mentored by well-seasoned Business Analysts',
   ],
 
   education: [
