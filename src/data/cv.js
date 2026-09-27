@@ -76,6 +76,8 @@ export const cv = {
         'Over 70% of approved applicants receiving funding within 1 working day',
         'Experience delivering small change requests to Barclaycard Platforms',
         'Exposure to working in large multi-functional teams & being mentored by well-seasoned Business Analysts',
+      ],
+    },
   ],
 
   education: [
