@@ -1,0 +1,4 @@
+# Copy this file to `.dev.vars` (gitignored, never committed) for local
+# `npx wrangler dev` testing. Production uses a real Wrangler secret
+# instead — see README.md.
+GEMINI_API_KEY=your-local-test-key-here

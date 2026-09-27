@@ -1,0 +1,37 @@
+name = "hm592-ai-chat"
+main = "src/index.js"
+compatibility_date = "2025-01-01"
+
+# Comma-separated list of origins allowed to call this Worker. Production
+# is the GitHub Pages user site; localhost is included so `npm run dev`
+# (Vite) can be tested against `wrangler dev` locally. Trim the localhost
+# entry if you don't want it allowed even in the deployed Worker.
+[vars]
+ALLOWED_ORIGINS = "https://hm592.github.io,http://localhost:5173"
+
+# Verify this against Google's current Gemini model list before deploying —
+# model names/versions change; this is just the current Flash model at the
+# time this was written. Bump here, no code change needed.
+GEMINI_MODEL = "gemini-3.8-flash"
+
+# Workers KV — backs the 10-minute and daily rate-limit counters. Create
+# with `npx wrangler kv namespace create RATE_LIMIT_KV` from worker/, then
+# paste the returned id below.
+[[kv_namespaces]]
+binding = "RATE_LIMIT_KV"
+id = "5789e7fe9e674a23b33f5b8aa2d34e0f"
+
+# Native Workers Rate Limiting binding — a cheap first-pass burst gate
+# (10 requests / 60s per key) that runs before any KV read, so a rapid-fire
+# script gets rejected at the edge without the Worker touching KV at all.
+# This binding's "period" only supports 10 or 60 seconds, which is why the
+# actual 10-per-10-minutes and 30-per-day limits are implemented with
+# RATE_LIMIT_KV above instead — this binding is a supplementary burst gate,
+# not the primary rate limiter.
+[[ratelimits]]
+name = "BURST_LIMITER"
+namespace_id = "1001"
+
+[ratelimits.simple]
+limit = 10
+period = 60
