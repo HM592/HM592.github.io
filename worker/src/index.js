@@ -219,8 +219,12 @@ async function handlePost(request, env, origin) {
 
   // ---- input validation ----
   const question = typeof payload.question === 'string' ? payload.question.trim() : ''
-  if (!question || question.length > MAX_QUESTION_CHARS) {
-    log('request_refused', { reason: 'question' })
+  if (!question) {
+    log('request_refused', { reason: 'question_empty' })
+    return jsonResponse({ error: 'Please enter a question.' }, 400, origin)
+  }
+  if (question.length > MAX_QUESTION_CHARS) {
+    log('request_refused', { reason: 'question_too_long' })
     return jsonResponse({ error: 'Please ask a question under 500 characters.' }, 400, origin)
   }
 
